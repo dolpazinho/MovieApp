@@ -1,47 +1,32 @@
   <template>
     <div id="movie-container">
       Movie List
-
-      <ul>
-        <li style="color: white" v-for="(movie, index) in movies" :key="movie.id">
-          Index: {{index}} {{movie.name}}
-        </li>
-      </ul>
+      <movie v-for="movie in movies" :key="movie.id" :movie="movie"/>
     </div>
+
   </template>
 
 
   <script>
-
+  import Movie from "@/components/Movie";
   export default {
+    components: {
+      Movie,
+    },
     data() {
         return {
-            movies: [
-              {
-                id: 1,
-                name: 'Movie 1',
-              },
-              {
-                id: 2,
-                name: 'Movie 2',
-              },
-              {
-                id: 3,
-                name: 'Movie 3',
-              },
-              {
-                id: 4,
-                name: 'Movie 4',
-              },
-              {
-                id: 5,
-                name: 'Movie 5',
-              },
-            ]
-        }
-    }
-
-  }
+           movies: []
+        };
+    },
+    computed: {
+/*      movies() {
+        return this.$store.getters.getMovies;
+      },*/
+    },
+    created() {
+      this.movies = this.$store.getters.getMovies;
+    },
+  };
 
   </script>
 
