@@ -25,7 +25,7 @@ export default {
         display: flex;
         padding: 15px;
         justify-content: space-between;
-        background-color: #a34c01;
+        background-color: dodgerblue;
 
         h2 {
           margin: 0 1rem 0 0;
