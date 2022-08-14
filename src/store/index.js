@@ -1,20 +1,16 @@
 import { createStore } from 'vuex'
-
-const SET_USER = "SET_USER" //set user constant
+import movies from "@/store/modules/movies";
 
 export default createStore({
   state: {
-    user: {}
   },
   getters: {
   },
   mutations: {
-    [SET_USER](state, user){
-      state.user = user
-    }
   },
   actions: {
   },
   modules: {
+    movies
   }
 })
