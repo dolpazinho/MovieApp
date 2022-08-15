@@ -19,13 +19,13 @@
         };
     },
     computed: {
-/*      movies() {
+      movies() {
         return this.$store.getters.getMovies;
-      },*/
+      },
     },
-    created() {
+/*    created() {
       this.movies = this.$store.getters.getMovies;
-    },
+    },*/
   };
 
   </script>
